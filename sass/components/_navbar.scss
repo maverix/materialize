@@ -1,3 +1,5 @@
+@import "variables";
+
 nav {
   &.nav-extended {
     height: auto;
@@ -189,9 +191,12 @@ nav {
   position: relative;
   height: $navbar-height-mobile;
   z-index: 997;
+  padding-top: 0;
+  padding-top: constant(safe-area-insert-top);
+  padding-top: env(safe-area-insert-top);
 
   nav {
-    position: fixed;
+      position: fixed;
   }
 }
 @media #{$medium-and-up} {
